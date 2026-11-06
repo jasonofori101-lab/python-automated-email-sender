@@ -41,3 +41,13 @@ I also learned how important it is to consider different user inputs instead of 
 I eventually want to add a feature that actually sends emails instead of just generating previews. I'd also like to allow users to add their own contacts and create their own email templates.
 
 **Note:** This version generates email previews and does not send actual emails.
+
+
+## Program Screenshots
+
+### Screenshot 1: Program Interface
+![Program Interface](email-preview.png)
+
+### Screenshot 2: Generated Email Preview
+![Generated Email Preview](email-preview.png2.png)
+
