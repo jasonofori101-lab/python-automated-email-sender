@@ -39,8 +39,8 @@ templates = {
 
     Hello {name}
     Thank you for your interest in {company}. After reviewing your application,
-    we've decided to move forward with applicants for this position. Please know
-    that this not reflect your abilities and that you are still open to applying 
+    we've decided to move forward with other applicants for this position.
+    Please know that this decision does not reflect your abilities. You are still open to applying 
     to other positions at this time.
 
     Best Regards,
