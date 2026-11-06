@@ -1,6 +1,4 @@
-from test.test_pydoc.pydocfodder import count
-
-print('This is your automated email sender V1.')
+''' Generating customized email previews from reusable templates.'''
 
 contacts = [
     {'name': 'Michael', 'email': 'chilledcoconutz@gmail.com'},
@@ -53,29 +51,8 @@ templates = {
 
 companies = list(company_list.values())
 
-#This for the generation of
+#Company Selection
 
-#A problem that you'll encounter in the future is how long the list could get in the future
-#You could potentially create a list of dictionaries alphabetically so that you could pull companies from each one
-#Starting from the first letter
-
-
-#To compress the process of writing all the if statements, I could loop/iterate through the company list looking for the value
-# Challenge       /|
-#                / |
-#               /  |
-#                  |
-#                  |
-#                  |
-#             _____|____
-#
-#
-#   Generate your company menu automatically
-
-#Notes
-## What I want this part to do is to basically associate number_option with the company choice so that if company_choice
-# If company_choice is equal to 1 or any number it should go through the enumerated list and pick that one
-#Make sure that company choice is a digit before converting from string to integer
 def select_company(companies):
         company_options = []
 
@@ -112,16 +89,7 @@ def select_company(companies):
         return company
 
 
-
-#Challenge 2 - Recipient Selection - > contact_choice
-#
-#
-#
-#str(range(len(contacts)))
-#
-#
-# Recipient Selection Improvement
-
+#Recipient Selection
 
 def select_recipient(contacts):
     #Building the list
@@ -152,11 +120,7 @@ def select_recipient(contacts):
 
 
 
-#Challenge 3 - Template
-#
-# Building the Template Section of this code
-#
-#
+#Email template section
 
 def select_template(templates):
     while True:
@@ -186,60 +150,30 @@ def generate_emails(selected_contacts, chosen_template, chosen_company):
         print(message)
 
 #Running the code
-
-while True:
-    print('\nPlease select a company.\n')
-
-    chosen_company = select_company(companies)
-    print(f'\nYou chose: {chosen_company}')
-
-    selected_contacts = select_recipient(contacts)
-
-    chosen_template = select_template(templates)
-
-    generate_emails(selected_contacts, chosen_template, chosen_company)
-
-
+def main(): 
     while True:
-        more_emails = input(f'\nWould you like to print out more emails?(y/n)\n').strip().lower()
-        if more_emails in ('yes', 'y','no', 'n'):
-            break
-        else:
-            print('\nI don\'t understand. Please choose between (y/n).\n')
-    if more_emails in ('no', 'n'):
-        break
+        print('This is your automated email sender V1.')
+    
+        chosen_company = select_company(companies)
+        print(f'\nYou chose: {chosen_company}')
+    
+        selected_contacts = select_recipient(contacts)
+    
+        chosen_template = select_template(templates)
+    
+        generate_emails(selected_contacts, chosen_template, chosen_company)
 
+
+        while True:
+            more_emails = input(f'\nWould you like to print out more emails?(y/n)\n').strip().lower()
+            if more_emails in ('yes', 'y','no', 'n'):
+                break
+            else:
+                print('\nI don\'t understand. Please choose between (y/n).\n')
+        if more_emails in ('no', 'n'):
+            break
+
+if _name_ == '__main__':
+    main()
 #Complete
 
-
-
-
-
-
-
-
-
-
-#Notes
-# Important Variables
-# company = chosen_company
-# name = contact_choice - > Change so that message name is not read as the number_option
-# email = dependent on condition
-#
-#
-
-
-#
-# Make code/ condition where if 'Everyone' is chosen then it iterates through the contacts and produces however many emails by using information
-# stored in variables
-# Probably want to do this by creating an if statement
-#
-
-#
-#Also correct the messages section so that each part of the code stores information that is to be used in the message part of the section
-#
-#
-#Last thing that you have to do is make it so that the code can be looped through
-# ChatGPT would also probably want you to later break it down into functions so that you can move on to more complex things
-
-#Bytebyte learning coding info for your things
