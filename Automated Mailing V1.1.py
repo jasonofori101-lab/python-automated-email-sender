@@ -2,8 +2,8 @@
 
 contacts = [
     {'name': 'Michael', 'email': 'michealsworld@gmail.com'},
-    {'name': 'John', 'email': 'janedoe@gmail.com'},
-    {'name': 'Jane', 'email': 'johndoe@gmail.com'}
+    {'name': 'John', 'email': 'johndoe@gmail.com'},
+    {'name': 'Jane', 'email': 'janedoe@gmail.com'}
 
 ]
 
@@ -86,8 +86,6 @@ def select_company(companies):
             elif company_choice.lower() == company.lower():
                 return company
 
-        return company
-
 
 #Recipient Selection
 
@@ -152,7 +150,7 @@ def generate_emails(selected_contacts, chosen_template, chosen_company):
 #Running the code
 def main(): 
     while True:
-        print('This is your automated email sender V1.')
+        print('Welcome to Automated Email Preview Generator V1!.')
     
         chosen_company = select_company(companies)
         print(f'\nYou chose: {chosen_company}')
@@ -173,7 +171,7 @@ def main():
         if more_emails in ('no', 'n'):
             break
 
-if _name_ == '__main__':
+if __name__ == '__main__':
     main()
 #Complete
 
