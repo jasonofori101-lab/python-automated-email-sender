@@ -1,9 +1,9 @@
 ''' Generating customized email previews from reusable templates.'''
 
 contacts = [
-    {'name': 'Michael', 'email': 'michealsworld@gmail.com'},
-    {'name': 'John', 'email': 'johndoe@gmail.com'},
-    {'name': 'Jane', 'email': 'janedoe@gmail.com'}
+    {'name': 'Michael', 'email': 'michealsworld@example.com'},
+    {'name': 'John', 'email': 'johndoe@example.com'},
+    {'name': 'Jane', 'email': 'janedoe@example.com'}
 
 ]
 
